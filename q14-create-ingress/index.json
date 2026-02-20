@@ -8,8 +8,7 @@
       "foreground": "intro/foreground.sh"
     },
     "steps": [
-      { "title": "Task", "text": "step1/text.md", "verify": "step1/verify.sh" },
-      { "title": "Solution", "text": "step2/text.md" }
+      { "title": "Task", "text": "step1/text.md", "verify": "step1/verify.sh" }
     ],
     "finish": { "text": "finish/text.md" }
   },
