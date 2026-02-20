@@ -1,0 +1,18 @@
+{
+  "title": "Q1 – Create Secret from Hardcoded Variables",
+  "description": "CKAD Practice — Q1 – Create Secret from Hardcoded Variables",
+  "details": {
+    "intro": {
+      "text": "intro/text.md",
+      "background": "intro/background.sh",
+      "foreground": "intro/foreground.sh"
+    },
+    "steps": [
+      { "title": "Task", "text": "step1/text.md", "verify": "step1/verify.sh" },
+      { "title": "Solution", "text": "step2/text.md" }
+    ],
+    "finish": { "text": "finish/text.md" }
+  },
+  "backend": { "imageid": "kubernetes-kubeadm-1node" },
+  "interface": { "layout": "ide-terminal" }
+}

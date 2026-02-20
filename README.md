@@ -1,83 +1,80 @@
-# CKAD Practice Lab – Killercoda Scenario
+# CKAD Practice Lab — Killercoda Scenarios
 
-Interactive CKAD exam practice with **16 auto-verified questions**, split-screen terminal, and step-by-step verification — just like the real exam.
+**16 independent scenarios** you can pick in any order, each with:
+- 📝 Question panel (left side)
+- 💻 Terminal (right side)  
+- ✅ Auto-verification (click "Check")
+- 📖 Solution step (click "Next" to reveal)
 
-Based on [aravind4799/CKAD-Practice-Questions](https://github.com/aravind4799/CKAD-Practice-Questions).
+Based on [aravind4799/CKAD-Practice-Questions](https://github.com/aravind4799/CKAD-Practice-Questions)
 
-## 🚀 How to Set Up on Killercoda Creator
+## Scenarios
 
-### 1. Create a GitHub Repository
+| # | Scenario | Topic |
+|---|----------|-------|
+| 1 | `q01-secret-from-hardcoded-vars` | Secrets & env vars |
+| 2 | `q02-cronjob` | CronJob scheduling |
+| 3 | `q03-rbac-from-logs` | ServiceAccount, Role, RoleBinding |
+| 4 | `q04-fix-pod-serviceaccount` | RBAC troubleshooting |
+| 5 | `q05-podman-build` | Container image build |
+| 6 | `q06-canary-deployment` | Canary traffic split |
+| 7 | `q07-fix-networkpolicy-labels` | NetworkPolicy labels |
+| 8 | `q08-fix-broken-deployment` | Fix deprecated YAML |
+| 9 | `q09-rolling-update-rollback` | Rolling update & rollback |
+| 10 | `q10-readiness-probe` | Readiness probes |
+| 11 | `q11-security-context` | Security context |
+| 12 | `q12-fix-service-selector` | Service selector fix |
+| 13 | `q13-nodeport-service` | NodePort service |
+| 14 | `q14-create-ingress` | Ingress resource |
+| 15 | `q15-fix-ingress-pathtype` | Ingress pathType fix |
+| 16 | `q16-resource-requests-limits` | ResourceQuota & limits |
 
-Create a new repo (e.g., `ckad-killercoda`) and push the `ckad-practice-questions/` directory to it.
+## Setup on Killercoda Creator
+
+### 1. Push to GitHub
 
 ```bash
 git init
 git add .
-git commit -m "Initial CKAD practice scenario"
+git commit -m "CKAD practice scenarios"
 git branch -M main
-git remote add origin git@github.com:<your-username>/ckad-killercoda.git
-git push -u origin main
+git remote add origin git@github.com:rifkhan107/ckad-killercoda.git
+git push -u origin main --force
 ```
 
 ### 2. Configure Killercoda Creator
 
-Go to [killercoda.com/creator](https://killercoda.com/creator) and:
+1. **Repo Name**: `ckad-killercoda` | **Branch**: `main`
+2. Add **Deploy Key** → GitHub repo → Settings → Deploy Keys
+3. Add **Webhook** → GitHub repo → Settings → Webhooks
+   - Content type: `application/json`
+   - Paste the secret from Killercoda
 
-1. **Repo Name**: Enter your repo name (e.g., `ckad-killercoda`)
-2. **Branch**: `main`
-3. **Deploy Key**: Copy the SSH key from Killercoda and add it to your GitHub repo:
-   - GitHub repo → Settings → Deploy Keys → Add deploy key
-4. **Webhook**: Copy the Webhook URL from Killercoda and add it to your GitHub repo:
-   - GitHub repo → Settings → Webhooks → Add webhook
-   - Set Content type to `application/json`
-   - Paste the Secret from Killercoda
+### 3. Access
 
-### 3. Push and Test
-
-After setting up the webhook, every push to `main` will auto-sync to Killercoda. Your scenario will be available at:
-
+Each scenario appears as a separate item at:
 ```
-https://killercoda.com/<your-username>/ckad-practice-questions
+https://killercoda.com/rifkhan107/course/q01-secret-from-hardcoded-vars
+https://killercoda.com/rifkhan107/course/q02-cronjob
+...etc
 ```
 
-## 📋 Questions Covered
+Users see all 16 scenarios listed on your profile and can pick any one.
 
-| # | Topic | Namespace |
-|---|-------|-----------|
-| 1 | Create Secret from Hardcoded Variables | default |
-| 2 | Create CronJob with Schedule & History Limits | default |
-| 3 | Create ServiceAccount, Role, and RoleBinding | audit |
-| 4 | Fix Broken Pod with Correct ServiceAccount | monitoring |
-| 5 | Build Container Image & Save as Tarball | n/a |
-| 6 | Create Canary Deployment with Traffic Split | default |
-| 7 | Fix NetworkPolicy by Updating Pod Labels | network-demo |
-| 8 | Fix Broken Deployment YAML | default |
-| 9 | Perform Rolling Update and Rollback | default |
-| 10 | Add Readiness Probe to Deployment | default |
-| 11 | Configure Pod & Container Security Context | default |
-| 12 | Fix Service Selector | default |
-| 13 | Create NodePort Service | default |
-| 14 | Create Ingress Resource | default |
-| 15 | Fix Ingress PathType | default |
-| 16 | Add Resource Requests and Limits | prod |
-
-## 🏗️ Scenario Structure
+## Structure
 
 ```
-ckad-practice-questions/
-├── index.json              # Scenario config (kubernetes-kubeadm-1node)
+q01-secret-from-hardcoded-vars/
+├── index.json           # Scenario config
 ├── intro/
-│   ├── text.md             # Welcome page
-│   ├── background.sh       # Provisions all resources
-│   └── foreground.sh       # Displays progress to user
-├── step1/ ... step16/
-│   ├── text.md             # Question instructions + hints
-│   └── verify.sh           # Auto-verification script
+│   ├── background.sh    # Provisions resources (runs hidden)
+│   ├── foreground.sh    # Shows setup progress
+│   └── text.md          # Intro page
+├── step1/
+│   ├── text.md          # Question
+│   └── verify.sh        # Auto-check script
+├── step2/
+│   └── text.md          # Solution (revealed on "Next")
 └── finish/
-    └── text.md             # Completion page
+    └── text.md          # Completion page
 ```
-
-## Credits
-
-- Questions: [aravind4799/CKAD-Practice-Questions](https://github.com/aravind4799/CKAD-Practice-Questions)
-- Platform: [Killercoda](https://killercoda.com)
