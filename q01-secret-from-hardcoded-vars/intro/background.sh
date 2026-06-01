@@ -20,12 +20,14 @@ spec:
       containers:
         - name: api
           image: busybox:latest
-          command: ["sh", "-c", "while true; do echo DB_USER=$DB_USER DB_PASS=$DB_PASS; sleep 30; done"]
+          command: ["sh", "-c", "while true; do echo connecting to $DB_NAME as $DB_USER; sleep 30; done"]
           env:
             - name: DB_USER
               value: "admin"
             - name: DB_PASS
               value: "Secret123!"
+            - name: DB_NAME
+              value: "mydb"
 M
 kubectl rollout status deploy/api-server --timeout=120s 2>/dev/null || true
 touch /tmp/.lab-setup-done
