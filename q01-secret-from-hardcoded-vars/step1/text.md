@@ -1,11 +1,11 @@
 # Task
 
-Deployment `api-server` in namespace `default` has **three hardcoded database credentials** in its container environment variables.
+Deployment `api-server` in namespace `prod` has **three hardcoded database credentials** in its container environment variables.
 
 ## Your Task
 
 1. Inspect the deployment to find the current env var names and their values
-2. Create a Secret named `db-credentials` in namespace `default` with these keys:
+2. Create a Secret named `db-credentials` in namespace `prod` with these keys:
    - `username`
    - `password`
    - `database`
@@ -34,7 +34,8 @@ The secret keys are lowercase (`username`, `password`, `database`) — but the e
 kubectl create secret generic db-credentials \
   --from-literal=username=<value> \
   --from-literal=password=<value> \
-  --from-literal=database=<value>
+  --from-literal=database=<value> \
+  -n prod
 ```
 
 </details>
@@ -44,7 +45,7 @@ kubectl create secret generic db-credentials \
 
 ### Step 1 – Discover the hardcoded values
 ```bash
-kubectl describe deployment api-server
+kubectl describe deployment api-server -n prod
 # Look under "Environment:" — note the values next to DB_USER, DB_PASS, DB_NAME
 ```
 
@@ -53,12 +54,13 @@ kubectl describe deployment api-server
 kubectl create secret generic db-credentials \
   --from-literal=username=admin \
   --from-literal=password=Secret123! \
-  --from-literal=database=mydb
+  --from-literal=database=mydb \
+  -n prod
 ```
 
 ### Step 3 – Update the Deployment
 ```bash
-kubectl edit deploy api-server
+kubectl edit deploy api-server -n prod
 ```
 
 Replace the `env:` block with — note `name:` stays uppercase, `key:` is lowercase:
@@ -83,8 +85,8 @@ env:
 
 ### Verify
 ```bash
-kubectl rollout status deploy api-server
-kubectl exec deploy/api-server -- env | grep DB_
+kubectl rollout status deploy api-server -n prod
+kubectl exec deploy/api-server -n prod -- env | grep DB_
 ```
 
 </details>
