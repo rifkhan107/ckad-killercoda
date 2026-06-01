@@ -1,6 +1,6 @@
 {
-  "title": "Q8 – Fix Deprecated API Version (extensions/v1beta1 → apps/v1)",
-  "description": "CKAD Practice — Q8 – Fix Deprecated API Version (extensions/v1beta1 → apps/v1)",
+  "title": "Q17 – Save Container Image in OCI Archive Format",
+  "description": "CKAD Practice — Q17 – Save Container Image in OCI Archive Format",
   "details": {
     "intro": {
       "text": "intro/text.md",

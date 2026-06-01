@@ -1,6 +1,6 @@
 {
-  "title": "Q8 – Fix Deprecated API Version (extensions/v1beta1 → apps/v1)",
-  "description": "CKAD Practice — Q8 – Fix Deprecated API Version (extensions/v1beta1 → apps/v1)",
+  "title": "Q18 – Add Label to Deployment Pod Template",
+  "description": "CKAD Practice — Q18 – Add Label to Deployment Pod Template",
   "details": {
     "intro": {
       "text": "intro/text.md",
