@@ -16,7 +16,7 @@ Based on [aravind4799/CKAD-Practice-Questions](https://github.com/aravind4799/CK
 | 2 | `q02-cronjob` | CronJob scheduling |
 | 3 | `q03-rbac-from-logs` | ServiceAccount, Role, RoleBinding |
 | 4 | `q04-fix-pod-serviceaccount` | RBAC troubleshooting |
-| 5 | `q05-podman-build` | Container image build (Docker tar & OCI archive) |
+| 5 | `q05-podman-build` | Container image build |
 | 6 | `q06-canary-deployment` | Canary traffic split |
 | 7 | `q07-fix-networkpolicy-labels` | NetworkPolicy labels |
 | 8 | `q08-fix-broken-deployment` | Fix deprecated API (extensions/v1beta1 → apps/v1) |
