@@ -1,6 +1,6 @@
 # CKAD Practice Lab — Killercoda Scenarios
 
-**16 independent scenarios** you can pick in any order, each with:
+**17 independent scenarios** you can pick in any order, each with:
 - 📝 Question panel (left side)
 - 💻 Terminal (right side)  
 - ✅ Auto-verification (click "Check")
@@ -16,10 +16,10 @@ Based on [aravind4799/CKAD-Practice-Questions](https://github.com/aravind4799/CK
 | 2 | `q02-cronjob` | CronJob scheduling |
 | 3 | `q03-rbac-from-logs` | ServiceAccount, Role, RoleBinding |
 | 4 | `q04-fix-pod-serviceaccount` | RBAC troubleshooting |
-| 5 | `q05-podman-build` | Container image build |
+| 5 | `q05-podman-build` | Container image build (Docker tar & OCI archive) |
 | 6 | `q06-canary-deployment` | Canary traffic split |
 | 7 | `q07-fix-networkpolicy-labels` | NetworkPolicy labels |
-| 8 | `q08-fix-broken-deployment` | Fix deprecated YAML |
+| 8 | `q08-fix-broken-deployment` | Fix deprecated API (extensions/v1beta1 → apps/v1) |
 | 9 | `q09-rolling-update-rollback` | Rolling update & rollback |
 | 10 | `q10-readiness-probe` | Readiness probes |
 | 11 | `q11-security-context` | Security context |
@@ -28,6 +28,7 @@ Based on [aravind4799/CKAD-Practice-Questions](https://github.com/aravind4799/CK
 | 14 | `q14-create-ingress` | Ingress resource |
 | 15 | `q15-fix-ingress-pathtype` | Ingress pathType fix |
 | 16 | `q16-resource-requests-limits` | ResourceQuota & limits |
+| 17 | `q17-add-label-deployment` | Add label to Deployment pod template |
 
 ## Setup on Killercoda Creator
 
