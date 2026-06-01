@@ -1,6 +1,6 @@
 {
-  "title": "Q17 – Save Container Image in OCI Archive Format",
-  "description": "CKAD Practice — Q17 – Save Container Image in OCI Archive Format",
+  "title": "Q17 – Add Label to Deployment Pod Template",
+  "description": "CKAD Practice — Q17 – Add Label to Deployment Pod Template",
   "details": {
     "intro": {
       "text": "intro/text.md",

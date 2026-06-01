@@ -1,6 +1,6 @@
 {
-  "title": "Q5 – Build Container Image and Save as Tarball",
-  "description": "CKAD Practice — Q5 – Build Container Image and Save as Tarball",
+  "title": "Q5 – Build Container Image and Save (Docker tar & OCI Archive)",
+  "description": "CKAD Practice — Q5 – Build Container Image and Save (Docker tar & OCI Archive)",
   "details": {
     "intro": {
       "text": "intro/text.md",
