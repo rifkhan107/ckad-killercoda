@@ -9,6 +9,8 @@ Deployment `secure-app` has no security context.
 
 ⚠️ Capabilities are set at container level, not Pod level.
 
+> **Note:** This deployment uses `nginxinc/nginx-unprivileged` — an image designed to run as a non-root user on port `8080`. Unlike `nginx:latest`, it won't crash when `runAsUser` is set.
+
 📖 [Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
 ---
@@ -36,6 +38,9 @@ spec:
         runAsUser: 1000
       containers:
         - name: app
+          image: nginxinc/nginx-unprivileged
+          ports:
+            - containerPort: 8080
           securityContext:      # Container-level
             capabilities:
               add: ["NET_ADMIN"]

@@ -11,7 +11,7 @@ spec:
   template:
     metadata: { labels: { app: secure-app } }
     spec:
-      containers: [{ name: app, image: "nginx:latest", ports: [{ containerPort: 80 }] }]
+      containers: [{ name: app, image: "nginxinc/nginx-unprivileged", ports: [{ containerPort: 8080 }] }]
 M
 kubectl rollout status deploy/secure-app --timeout=120s 2>/dev/null || true
 touch /tmp/.lab-setup-done
